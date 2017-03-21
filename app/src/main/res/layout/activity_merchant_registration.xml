@@ -139,7 +139,7 @@
 
                 android:textColor="#FFFFFF"
                 android:onClick="onClickGetlatitudelongitudebutton"/>
-            <Button
+         <!--   <Button
                 android:id="@+id/profileimg_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -151,6 +151,8 @@
                 android:textColor="#FFFFFF"
                 android:text="upload profile image"
                 android:onClick="onClickUploadprofileimagebutton"/>
+            -->
+
             <Button
                 android:id="@+id/createterminal1_button"
                 android:layout_width="match_parent"

@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.MerchantSingupActivity" />
+        <activity android:name=".activities.MerchantSignupActivity" />
         <activity android:name=".activities.OtpActivity" />
         <activity android:name=".activities.MerchantRegistrationActivity" />
         <activity android:name=".activities.CreateTerminalActivity" />

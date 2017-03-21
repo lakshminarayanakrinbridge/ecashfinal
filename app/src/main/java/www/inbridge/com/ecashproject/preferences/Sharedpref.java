@@ -75,4 +75,32 @@ public class Sharedpref {
 
 
     public static  String newstr=null;
-}
+
+
+
+
+
+
+        public static final String LATITUDE_SHARED_PREF="lat";
+        public static final String LONGITUDE_SHARED_PREF="lng";
+        public static final String KEY_CASHIERNAME1="cashiername1";
+        public static final String KEY_CASHIERNAME2="cashiername2";
+        public static final String KEY_CASHIERMOBILE1="cashiermobile1";
+        public static final String KEY_CASHIERMOBILE2="cashiermobile2";
+        public static final String KEY_CASHIEREMAIL1="cashieremail1";
+        public static final String KEY_CASHIEREMAIl2="cashieremail2";
+        public static final String TERMINAL1_CASHIERNAME="terminal_name1";
+        public static final String TERMINAL1_MOBILENUMBER="mobile1";
+        public static final String TERMINAL1_EMAILID="email1";
+        public static final String TERMINAL2_CASHIERNAME="terminal_name2";
+        public static final String TERMINAL2_MOBILENUMBER="mobile2";
+        public static final String TERMINAL2_EMAILID="email2";
+
+
+
+
+    }
+
+
+
+
