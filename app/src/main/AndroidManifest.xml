@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="www.inbridge.com.ecashproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_ecashlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MerchantSingupActivity" />
+        <activity android:name=".activities.OtpActivity" />
+        <activity android:name=".activities.MerchantRegistrationActivity" />
+        <activity android:name=".activities.CreateTerminalActivity" />
+        <activity android:name=".activities.MerchantLoginActivity" />
+        <activity android:name=".activities.MerchantDashboardActivity" />
+        <activity android:name=".activities.MerchantViewTerminalActivity" />
+        <activity android:name=".activities.EditTerminalActivity" />
+        <activity android:name=".activities.MerchantProfileActivity" />
+        <activity android:name=".activities.AdminLoginActivity" />
+        <activity android:name=".activities.AdminDashboardActivity" />
+        <activity android:name=".activities.AdminCreateMerchantActivity" />
+        <activity android:name=".activities.AdminApproveMerchantActivity" />
+        <activity android:name=".activities.AdminSearchMerchantActivity" />
+        <activity android:name=".activities.AdminEditMerchantActivity" />
+        <activity android:name=".activities.AdminViewMerchantTerminal" />
+        <activity android:name=".activities.TerminalLoginActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.CreateTerminalOneActivity" />
+        <activity android:name=".activities.AdminChangePasswordActivity"></activity>
+    </application>
+</manifest>
