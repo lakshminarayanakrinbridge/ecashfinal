@@ -83,7 +83,7 @@ public class MerchantSignupActivity extends AppCompatActivity {
 
                         @Override
                         public void onResponse(String response) {
-                           // Toast.makeText(MerchantSignupActivity.this, response, Toast.LENGTH_LONG).show();
+                           Toast.makeText(MerchantSignupActivity.this, response, Toast.LENGTH_LONG).show();
                             //If we are getting success from server
                             String user_msg=null;
 
