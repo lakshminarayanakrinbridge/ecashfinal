@@ -15,10 +15,12 @@
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCWH2lmm-_dq2Fh0HmH2QXn2xIf-JDF3t4" />
         <activity
             android:name=".activities.MapsActivity"
             android:label="MapActivity" />
