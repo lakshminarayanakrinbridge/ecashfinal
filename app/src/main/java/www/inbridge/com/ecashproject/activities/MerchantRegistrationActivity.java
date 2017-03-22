@@ -161,7 +161,7 @@ public class MerchantRegistrationActivity extends AppCompatActivity {
 
     public void onClickGetlatitudelongitudebutton(View v)
     {
-        Intent i=new Intent(MerchantRegistrationActivity.this,MapsActivityOne.class);
+        Intent i=new Intent(MerchantRegistrationActivity.this,MapsActivity.class);
         startActivity(i);
     }
 

@@ -126,7 +126,7 @@
                 android:layout_marginRight="10dp"
                 android:textAlignment="center"
                 android:hint="KYC Details"/>
-            <Button
+           <Button
                 android:id="@+id/latlong_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
 
                 android:textColor="#FFFFFF"
                 android:onClick="onClickGetlatitudelongitudebutton"/>
-         <!--   <Button
+          <!--  <Button
                 android:id="@+id/profileimg_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
