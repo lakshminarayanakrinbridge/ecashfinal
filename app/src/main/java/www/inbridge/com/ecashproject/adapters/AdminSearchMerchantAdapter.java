@@ -116,10 +116,6 @@ public class AdminSearchMerchantAdapter extends RecyclerView.Adapter<AdminSearch
         holder.textedit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-                /*Fragment fragment=new AdminMerchantEditFragment();
-                android.app.FragmentManager fm = ((Activity)view.getContext()).getFragmentManager();
-                fm.beginTransaction().replace(R.id.content_frame,fragment).addToBackStack(null).commit();*/
-
                 AdminSearchMerchantData data = admindata.get(position);
                 strcode = data.merchantcodeter;
                 Toast.makeText(view.getContext(), data.merchantcodeter, Toast.LENGTH_LONG).show();
@@ -134,8 +130,8 @@ public class AdminSearchMerchantAdapter extends RecyclerView.Adapter<AdminSearch
 
 
                                 JSONObject jsonObject;
-                                String string = null;
-                                String boolval = null;
+                                String string ;
+                                String boolval;
                                 try {
                                     jsonObject = new JSONObject(response);
                                     string = jsonObject.getString("user_msg");
