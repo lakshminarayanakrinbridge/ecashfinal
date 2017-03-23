@@ -145,7 +145,7 @@
                 android:textAlignment="center"
                 android:hint="Longitude Of The Location"/>
 
-            <Button
+          <!--  <Button
                 android:id="@+id/profileimg_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -157,6 +157,8 @@
                 android:onClick="onClickUploadprofileimagebutton"
                 android:background="@color/colorButton"
                 android:textColor="#FFFFFF"/>
+
+                -->
 
             <Button
                 android:id="@+id/submit_button"
