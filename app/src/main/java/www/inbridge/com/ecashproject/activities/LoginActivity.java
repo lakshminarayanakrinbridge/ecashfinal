@@ -177,6 +177,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(),"check your network connection!!",Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+
                     }
                 }) {
             @Override
