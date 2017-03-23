@@ -11,5 +11,6 @@ public class MerchantDashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_dashboard);
+        setTitle("Merchant Dashboard");
     }
 }

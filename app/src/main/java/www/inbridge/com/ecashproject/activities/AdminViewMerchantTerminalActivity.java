@@ -36,7 +36,7 @@ import www.inbridge.com.ecashproject.preferences.Sharedpref;
 import www.inbridge.com.ecashproject.services.Url;
 import www.inbridge.com.ecashproject.utils.AdminMerchantTerminalData;
 
-public class AdminViewMerchantTerminal extends AppCompatActivity {
+public class AdminViewMerchantTerminalActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private AdminMerchantTerminalViewAdapter adminMerchantTerminalViewAdapter;

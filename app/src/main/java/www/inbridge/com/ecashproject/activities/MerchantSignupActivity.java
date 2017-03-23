@@ -36,7 +36,7 @@ public class MerchantSignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_singup);
-
+        setTitle("Sign Up");
         Intent i = getIntent();
 
     }
@@ -151,6 +151,7 @@ public class MerchantSignupActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             //You can handle error here if you want
+                            Toast.makeText(getApplicationContext(),"check your network connection!!",Toast.LENGTH_SHORT).show();
                         }
                     }) {
                 @Override

@@ -21,6 +21,7 @@ public class CreateTerminalOneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_terminal_one);
+        setTitle("Create Terminal");
         Intent i=getIntent();
     }
 

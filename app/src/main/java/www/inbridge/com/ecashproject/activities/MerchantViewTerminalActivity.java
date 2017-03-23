@@ -11,5 +11,6 @@ public class MerchantViewTerminalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_view_terminal);
+        setTitle("Merchant Terminal");
     }
 }

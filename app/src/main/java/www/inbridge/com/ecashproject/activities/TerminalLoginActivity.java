@@ -11,5 +11,6 @@ public class TerminalLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terminal_login);
+        setTitle("Terminal Login");
     }
 }

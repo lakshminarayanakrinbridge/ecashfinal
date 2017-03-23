@@ -58,7 +58,7 @@
         <activity android:name=".activities.AdminApproveMerchantActivity" />
         <activity android:name=".activities.AdminSearchMerchantActivity" />
         <activity android:name=".activities.AdminEditMerchantActivity" />
-        <activity android:name=".activities.AdminViewMerchantTerminal" />
+        <activity android:name=".activities.AdminViewMerchantTerminalActivity" />
         <activity android:name=".activities.TerminalLoginActivity" />
         <activity android:name=".activities.ForgotPasswordActivity" />
         <activity android:name=".activities.CreateTerminalOneActivity" />

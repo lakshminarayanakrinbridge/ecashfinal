@@ -11,5 +11,6 @@ public class MerchantLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_login);
+        setTitle("Merchant");
     }
 }

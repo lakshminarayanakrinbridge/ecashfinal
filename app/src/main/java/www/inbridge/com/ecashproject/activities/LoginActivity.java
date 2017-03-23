@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setTitle("eCash");
         init();
     }
 
@@ -175,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),"VolleyLibraryException"+error,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"check your network connection!!",Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override

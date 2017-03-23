@@ -35,6 +35,7 @@ public class AdminEditMerchantActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_edit_merchant);
+        setTitle("Edit Merchant");
         Intent i=getIntent();
         final TextView mobilenumber=(TextView) findViewById(R.id.mobilenumber_textview);
         final TextView emailidtext=(TextView) findViewById(R.id.emailid_textview);

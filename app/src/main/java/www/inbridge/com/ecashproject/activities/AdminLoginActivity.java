@@ -21,6 +21,7 @@ public class AdminLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
+        setTitle("Admin");
         init();
     }
 
@@ -29,7 +30,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         btnApprove=(Button) findViewById(R.id.btn_approve);
         btnCreate=(Button)findViewById(R.id.btn_create);
         btnDashboard=(Button)findViewById(R.id.btn_dashboard);
-        btnSearch=(Button)findViewById(R.id.btn_dashboard);
+        btnSearch=(Button)findViewById(R.id.btn_search);
         btnChangePassword=(Button)findViewById(R.id.btn_changepassword);
     }
 

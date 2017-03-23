@@ -27,7 +27,7 @@ import java.util.Map;
 
 import www.inbridge.com.ecashproject.R;
 import www.inbridge.com.ecashproject.activities.AdminEditMerchantActivity;
-import www.inbridge.com.ecashproject.activities.AdminViewMerchantTerminal;
+import www.inbridge.com.ecashproject.activities.AdminViewMerchantTerminalActivity;
 import www.inbridge.com.ecashproject.preferences.Sharedpref;
 import www.inbridge.com.ecashproject.services.Url;
 import www.inbridge.com.ecashproject.utils.AdminSearchMerchantData;
@@ -40,7 +40,7 @@ public class AdminSearchMerchantAdapter extends RecyclerView.Adapter<AdminSearch
 
     private Context context;
     private LayoutInflater inflater;
-    List<AdminSearchMerchantData> admindata = new ArrayList<>();
+    private List<AdminSearchMerchantData> admindata = new ArrayList<>();
 
     public AdminSearchMerchantAdapter(Context context, List<AdminSearchMerchantData> admindata) {
         inflater = LayoutInflater.from(context);
@@ -81,7 +81,7 @@ public class AdminSearchMerchantAdapter extends RecyclerView.Adapter<AdminSearch
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putString(Sharedpref.KEY_MERCHANTID,strcode);
                 editor.commit();
-                Intent i=new Intent(view.getContext(), AdminViewMerchantTerminal.class);
+                Intent i=new Intent(view.getContext(), AdminViewMerchantTerminalActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
 
@@ -106,7 +106,7 @@ public class AdminSearchMerchantAdapter extends RecyclerView.Adapter<AdminSearch
                 editor.putString(Sharedpref.KEY_MERCHANTID,strcode);
                 editor.commit();
 
-                Intent i=new Intent(view.getContext(),AdminViewMerchantTerminal.class);
+                Intent i=new Intent(view.getContext(),AdminViewMerchantTerminalActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }

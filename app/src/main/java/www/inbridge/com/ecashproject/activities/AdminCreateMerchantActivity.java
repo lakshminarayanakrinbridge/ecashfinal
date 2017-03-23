@@ -58,6 +58,7 @@ public class AdminCreateMerchantActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_create_merchant);
+        setTitle("Create Merchant");
         init();
         // Inflate the layout for this fragment
         students = new ArrayList<String>();

@@ -11,5 +11,6 @@ public class MerchantProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_profile);
+        setTitle("Merchant Profile");
     }
 }

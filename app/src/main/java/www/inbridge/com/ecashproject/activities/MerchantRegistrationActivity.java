@@ -48,7 +48,7 @@ public class MerchantRegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_registration);
-
+        setTitle("Merchant Registration");
         Intent i=getIntent();
         SharedPreferences sharedPreferences = MerchantRegistrationActivity.this.getSharedPreferences(Sharedpref.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         String mobilenumber1 = sharedPreferences.getString(Sharedpref.MOBILENUMBER_SHARED_PREF, "mobilenumber");
