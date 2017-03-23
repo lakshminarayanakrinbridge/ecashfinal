@@ -12,4 +12,10 @@ public class AdminChangePasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_change_password);
     }
+
+
+    public void onClickCancelButton() {
+        onBackPressed();
+    }
 }
+
