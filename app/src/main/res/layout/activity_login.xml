@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textAppearance="?android:textAppearanceLarge"
-        android:hint="User Name"
+        android:hint="Mobile Number"
         android:maxLength="10"
         android:digits="1234567890"
         />
