@@ -43,7 +43,7 @@ public class AdminLoginActivity extends AppCompatActivity {
 
     public void onClickDashboard(View v)
     {
-        Intent intent=new Intent(getApplicationContext(),AdminDashboardActivity.class);
+        Intent intent=new Intent(getApplicationContext(),AdminViewMerchantOfferActivity.class);
         startActivity(intent);
 
 

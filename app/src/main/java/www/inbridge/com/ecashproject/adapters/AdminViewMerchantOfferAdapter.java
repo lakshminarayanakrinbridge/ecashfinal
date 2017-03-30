@@ -6,27 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import www.inbridge.com.ecashproject.R;
-import www.inbridge.com.ecashproject.services.Url;
-import www.inbridge.com.ecashproject.utils.AdminApproveMerchantData;
+import www.inbridge.com.ecashproject.utils.AdminViewOfferData;
 
 /**
  * Created by USER on 3/30/2017.
@@ -36,9 +21,9 @@ public class AdminViewMerchantOfferAdapter extends RecyclerView.Adapter<AdminVie
 
 
     private LayoutInflater inflater;
-    List<AdminApproveMerchantData> admindata = new ArrayList<>();
+    List<AdminViewOfferData> admindata = new ArrayList<>();
 
-    public AdminViewMerchantOfferAdapter(Context context, List<AdminApproveMerchantData> admindata) {
+    public AdminViewMerchantOfferAdapter(Context context, List<AdminViewOfferData> admindata) {
         inflater = LayoutInflater.from(context);
         this.admindata = admindata;
     }
@@ -48,7 +33,7 @@ public class AdminViewMerchantOfferAdapter extends RecyclerView.Adapter<AdminVie
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-        View view = inflater.inflate(R.layout.recycler_layout, parent, false);
+        View view = inflater.inflate(R.layout.adminviewoffer, parent, false);
         MyHolder myholder = new MyHolder(view);
         return myholder;
     }
@@ -58,68 +43,13 @@ public class AdminViewMerchantOfferAdapter extends RecyclerView.Adapter<AdminVie
     @Override
     public void onBindViewHolder(final MyHolder holder, final int position) {
 
-        AdminApproveMerchantData data = admindata.get(position);
-        holder.textMerchantcode.setText(data.merchantcode);
-        holder.textmerchantname.setText(data.merchantname);
-        holder.textcategory.setText(data.merchantcategory);
-        holder.approve.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                AdminApproveMerchantData data = admindata.get(position);
-                strcode = data.merchantcode;
-                Toast.makeText(view.getContext(), data.merchantcode, Toast.LENGTH_LONG).show();
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Url.APPROVED_URL,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                //If we are getting success from server
-                                Toast.makeText(view.getContext(), response, Toast.LENGTH_LONG).show();
+        AdminViewOfferData data = admindata.get(position);
+        holder.textMerchantname.setText(data.getMname());
+        holder.textmerchantkey.setText(data.getMkey());
+        holder.textmerchantcategory.setText(data.getMcategory());
+        holder.textmerchantoffer.setText(data.getMoffer());
+        holder.textmerchantvalidity.setText(data.getMvalidity());
 
-
-                                JSONObject jsonObject;
-                                String string = null;
-                                String boolval = null;
-                                try {
-                                    jsonObject = new JSONObject(response);
-                                    string = jsonObject.getString("user_msg");
-                                    boolval = jsonObject.getString("success");
-
-                                    if (boolval.equalsIgnoreCase("TRUE")) {
-                                        Toast.makeText(view.getContext(), string, Toast.LENGTH_LONG).show();
-                                        holder.approve.setText("Approved");
-                                    } else {
-                                        Toast.makeText(view.getContext(), string, Toast.LENGTH_LONG).show();
-                                    }
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-
-
-                            }
-                        },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                //You can handle error here if you want
-                            }
-                        }) {
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String, String> params = new HashMap<>();
-
-                        params.put("mid", strcode);
-                        //returning parameter
-                        return params;
-                    }
-                };
-
-                //Adding the string request to the queue
-                RequestQueue requestQueue = Volley.newRequestQueue(view.getContext());
-                requestQueue.add(stringRequest);
-
-            }
-        });
 
     }
 
@@ -130,18 +60,19 @@ public class AdminViewMerchantOfferAdapter extends RecyclerView.Adapter<AdminVie
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
-        TextView textMerchantcode;
-        TextView textcategory;
-        TextView textmerchantname;
-        TextView approve;
+        TextView textMerchantname;
+        TextView textmerchantkey;
+        TextView textmerchantoffer;
+        TextView textmerchantvalidity;
+        TextView textmerchantcategory;
 
         public MyHolder(View itemView) {
             super(itemView);
-            textMerchantcode = (TextView) itemView.findViewById(R.id.merchantcode_textview);
-            textcategory = (TextView) itemView.findViewById(R.id.merchantcategory_textview);
-            textmerchantname = (TextView) itemView.findViewById(R.id.merchantname_textview);
-            approve = (TextView) itemView.findViewById(R.id.approve_textview);
-
+            textMerchantname = (TextView) itemView.findViewById(R.id.tv_mname);
+            textmerchantkey = (TextView) itemView.findViewById(R.id.tv_mkey);
+            textmerchantoffer = (TextView) itemView.findViewById(R.id.tv_moffer);
+            textmerchantvalidity = (TextView) itemView.findViewById(R.id.tv_validity);
+            textmerchantcategory=(TextView) itemView.findViewById(R.id.tv_cat);
 
         }
     }

@@ -35,13 +35,14 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
 
-
         <activity
             android:name=".activities.MapsActivity"
             android:label="Maps" />
-            <meta-data
+
+        <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.MerchantSignupActivity" />
         <activity android:name=".activities.OtpActivity" />
@@ -63,8 +64,7 @@
         <activity android:name=".activities.ForgotPasswordActivity" />
         <activity android:name=".activities.CreateTerminalOneActivity" />
         <activity android:name=".activities.AdminChangePasswordActivity" />
-
-
+        <activity android:name=".activities.AdminViewMerchantOfferActivity"></activity>
     </application>
 
 </manifest>

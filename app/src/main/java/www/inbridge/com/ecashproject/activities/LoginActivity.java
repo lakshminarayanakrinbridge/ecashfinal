@@ -151,10 +151,22 @@ public class LoginActivity extends AppCompatActivity {
                             } else if(usrRole.equals("admin")) {
 
 
-                                Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
-                                progressBar.setVisibility(View.GONE);
-                                startActivity(intent);
-                                finish();
+                                try {
+                                    SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences(Sharedpref.SHARED_PREF_NAME, MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    JSONObject jsonObject = new JSONObject(response);
+                                    editor.putString(Sharedpref.MERCHANTID_SHARED_PREF, jsonObject.getString("user_id"));
+                                    editor.commit();
+                                    Toast.makeText(getApplicationContext(),sharedPreferences.getString(Sharedpref.MERCHANTID_SHARED_PREF,"m_id"),Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
+                                    progressBar.setVisibility(View.GONE);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                catch (JSONException e)
+                                {
+                                    e.printStackTrace();
+                                }
 
 
                             } else if (usrRole.equals("terminal")) {

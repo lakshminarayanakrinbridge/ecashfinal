@@ -26,6 +26,9 @@ public class Url {
 
     public static final String ADMIN_MERCHANT_URL=URL+"admin_merchant_details.php";
 
+    public static final String ADMIN_MERCHANT_OFFER_LIST=URL+"viewAdminOffers.php";
+
+    public static final String ADMIN_CHANGE_PASSWORD=URL+"changePassword.php";
 
     public static final String ADDTERMINAL_URL=URL+"insert_terminal.php";
 
