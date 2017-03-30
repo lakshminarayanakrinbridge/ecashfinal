@@ -188,6 +188,7 @@ public class MerchantRegistrationActivity extends AppCompatActivity {
     {
         Intent i=new Intent(MerchantRegistrationActivity.this,LoginActivity.class);
         startActivity(i);
+        finish();
     }
 
     public void onClickSubmitbutton(View v) {
