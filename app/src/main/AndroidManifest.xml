@@ -64,7 +64,9 @@
         <activity android:name=".activities.ForgotPasswordActivity" />
         <activity android:name=".activities.CreateTerminalOneActivity" />
         <activity android:name=".activities.AdminChangePasswordActivity" />
-        <activity android:name=".activities.AdminViewMerchantOfferActivity"></activity>
+        <activity android:name=".activities.AdminViewMerchantOfferActivity" />
+        <activity android:name=".activities.MerchantAddOffer" />
+        <activity android:name=".activities.MerchantChangePassword"></activity>
     </application>
 
 </manifest>
