@@ -60,6 +60,16 @@
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Add Offer"
+            android:onClick="onClickMyprofileButton"
+            android:background="@color/colorButton"
+            android:textColor="#FFFFFF"/>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="My Profile"
             android:onClick="onClickMyprofileButton"
             android:background="@color/colorButton"
