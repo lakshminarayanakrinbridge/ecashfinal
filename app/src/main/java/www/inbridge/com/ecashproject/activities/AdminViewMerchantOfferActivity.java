@@ -68,6 +68,9 @@ public class AdminViewMerchantOfferActivity extends AppCompatActivity {
                                 Log.e("value", Integer.toString(information.size()));
 
                             }
+                            adminViewMerchantOfferAdapter=new AdminViewMerchantOfferAdapter(getApplicationContext(),information);
+                            recyclerView.setAdapter(adminViewMerchantOfferAdapter);
+                            recyclerView.setLayoutManager(new LinearLayoutManager(AdminViewMerchantOfferActivity.this));
 
 
 
@@ -101,9 +104,7 @@ public class AdminViewMerchantOfferActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(stringRequest);
         Log.e("value1", Integer.toString(information.size()));
-        adminViewMerchantOfferAdapter=new AdminViewMerchantOfferAdapter(getApplicationContext(),information);
-        recyclerView.setAdapter(adminViewMerchantOfferAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(AdminViewMerchantOfferActivity.this));
+
 
         searchtext.addTextChangedListener(new TextWatcher() {
 
