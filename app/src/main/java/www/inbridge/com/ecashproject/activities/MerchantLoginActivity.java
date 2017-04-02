@@ -13,4 +13,6 @@ public class MerchantLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_merchant_login);
         setTitle("Merchant");
     }
+
+
 }
