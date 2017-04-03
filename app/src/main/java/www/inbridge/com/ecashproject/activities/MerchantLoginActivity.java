@@ -27,11 +27,11 @@ public class MerchantLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_merchant_login);
 
         //Initializing textview
-        textView = (TextView) findViewById(R.id.user_textview);
+        textView = (TextView) findViewById(R.id.username_textview);
 
         //Fetching email from shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences(Sharedpref.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        String username = sharedPreferences.getString(Sharedpref.USERNAME_SHARED_PREF,"Not Available");
+        String username = sharedPreferences.getString(Sharedpref.MERCHANT_NAME_SHARED_PREF,"mname");
         Toast.makeText(MerchantLoginActivity.this,username,Toast.LENGTH_LONG).show();
 
         //Showing the current logged in email to textview
