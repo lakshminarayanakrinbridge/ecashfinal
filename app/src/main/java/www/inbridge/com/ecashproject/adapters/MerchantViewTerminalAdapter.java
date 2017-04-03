@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import www.inbridge.com.ecashproject.R;
-import www.inbridge.com.ecashproject.activities.AdminViewMerchantTerminalActivity;
+import www.inbridge.com.ecashproject.activities.EditTerminalActivity;
 import www.inbridge.com.ecashproject.preferences.Sharedpref;
 import www.inbridge.com.ecashproject.utils.MerchantViewTerminalData;
 
@@ -79,7 +79,7 @@ import static www.inbridge.com.ecashproject.preferences.Sharedpref.newstr;
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putString(Sharedpref.KEY_MERCHANTID,strcode);
                 editor.commit();
-                Intent i=new Intent(view.getContext(), AdminViewMerchantTerminalActivity.class);
+                Intent i=new Intent(view.getContext(), EditTerminalActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
 
