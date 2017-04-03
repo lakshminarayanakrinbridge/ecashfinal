@@ -6,8 +6,16 @@
     android:layout_height="match_parent"
     android:layout_marginTop="5dp"
     android:layout_marginLeft="10dp">
-
-
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
         <TextView
             android:id="@+id/mercode_textview"
             android:layout_width="wrap_content"
@@ -73,11 +81,6 @@
         android:background="@color/colorButton"
         android:textAppearance="?android:textAppearanceLarge"
         android:textColor="#FFFFFF"/>
-    <View
-        android:background="#000000"
-        android:id="@+id/id7"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"/>
-
-
+</LinearLayout>
+</android.support.v7.widget.CardView>
 </LinearLayout>
