@@ -47,9 +47,11 @@ public class MerchantViewTerminalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_view_terminal);
         setTitle("Merchant Terminal");
+        SharedPreferences sharedPreferences=MerchantViewTerminalActivity.this.getSharedPreferences(Sharedpref.SHARED_PREF_NAME,MODE_PRIVATE);
+        Toast.makeText(getApplicationContext(),sharedPreferences.getString(Sharedpref.MERCHANT_CODE_SHARED_PREF,"mcode"),Toast.LENGTH_SHORT).show();
         recyclerView=(RecyclerView) findViewById(R.id.search_recyclerview1);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Url.ADMIN_MERCHANT_OFFER_LIST,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Url.TERMINALLIST_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -97,7 +99,7 @@ public class MerchantViewTerminalActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences=MerchantViewTerminalActivity.this.getSharedPreferences(Sharedpref.SHARED_PREF_NAME,MODE_PRIVATE);
 
 
-                params.put(Sharedpref.MERCHANTID_SHARED_PREF,sharedPreferences.getString(Sharedpref.KEY_MERCHANTID,"m_id"));
+                params.put("m_code",sharedPreferences.getString(Sharedpref.MERCHANT_CODE_SHARED_PREF,"mcode"));
                 return params;
             }
         };

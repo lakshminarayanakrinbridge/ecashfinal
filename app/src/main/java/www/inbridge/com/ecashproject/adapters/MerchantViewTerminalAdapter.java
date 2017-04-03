@@ -34,7 +34,7 @@ import www.inbridge.com.ecashproject.utils.MerchantViewTerminalData;
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-        View view = inflater.inflate(R.layout.merchantviewoffer, parent, false);
+        View view = inflater.inflate(R.layout.layout_merchant_terminal_list, parent, false);
         MyHolder myholder = new MyHolder(view);
         return myholder;
     }
