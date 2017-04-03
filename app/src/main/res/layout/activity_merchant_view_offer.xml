@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:weightSum="1">
 
     <EditText
         android:id="@+id/search"
@@ -13,7 +14,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:textSize="16sp"
-        android:hint="Search Merchant Name..."
+        android:hint="Search By Offer..."
         android:layout_marginTop="20dp" />
 
     <View
@@ -27,8 +28,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/search_recyclerview1"
         android:layout_below="@+id/border"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.35">
 
     </android.support.v7.widget.RecyclerView>
 

@@ -102,7 +102,7 @@ public class MerchantLoginActivity extends AppCompatActivity {
 
     public void onClickDashboardButton(View v)
     {
-        Intent i=new Intent(MerchantLoginActivity.this,MerchantDashboardActivity.class);
+        Intent i=new Intent(MerchantLoginActivity.this,MerchantViewOfferActivity.class);
         startActivity(i);
 
 

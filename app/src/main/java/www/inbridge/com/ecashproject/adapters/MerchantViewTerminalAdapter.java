@@ -1,17 +1,25 @@
 package www.inbridge.com.ecashproject.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import www.inbridge.com.ecashproject.R;
+import www.inbridge.com.ecashproject.activities.AdminViewMerchantTerminalActivity;
+import www.inbridge.com.ecashproject.preferences.Sharedpref;
 import www.inbridge.com.ecashproject.utils.MerchantViewTerminalData;
+
+import static www.inbridge.com.ecashproject.preferences.Sharedpref.newstr;
 
 /**
  * Created by USER on 2/25/2017.
@@ -23,10 +31,12 @@ import www.inbridge.com.ecashproject.utils.MerchantViewTerminalData;
 
     private LayoutInflater inflater;
     List<MerchantViewTerminalData> admindata = new ArrayList<>();
+    Context context;
 
     public MerchantViewTerminalAdapter(Context context, List<MerchantViewTerminalData> admindata) {
         inflater = LayoutInflater.from(context);
         this.admindata = admindata;
+        this.context=context;
     }
 
 
@@ -51,7 +61,35 @@ import www.inbridge.com.ecashproject.utils.MerchantViewTerminalData;
         holder.mobilenumber.setText(data.getMobilenumber());
         holder.emailid.setText(data.getEmailid());
         holder.terminalid.setText(data.getTerminalid());
+        holder.editbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                MerchantViewTerminalData data = admindata.get(position);
+                String cashiername = data.getCashiername();
+                String emailid=data.getEmailid();
+                String terminalcode=data.getTerminalid();
 
+                newstr=cashiername;
+                Sharedpref.newstr1=emailid;
+                Sharedpref.newstr2=terminalcode;
+                Toast.makeText(view.getContext(), newstr, Toast.LENGTH_LONG).show();
+
+
+                SharedPreferences sharedPreferences=view.getContext().getSharedPreferences(Sharedpref.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString(Sharedpref.KEY_MERCHANTID,strcode);
+                editor.commit();
+                Intent i=new Intent(view.getContext(), AdminViewMerchantTerminalActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
+
+
+
+
+
+
+            }
+        });
 
     }
 
@@ -66,10 +104,12 @@ import www.inbridge.com.ecashproject.utils.MerchantViewTerminalData;
         TextView mobilenumber;
         TextView emailid;
         TextView terminalid;
+        Button editbutton;
 
         public MyHolder(View itemView) {
             super(itemView);
             // textMerchantname = (TextView) itemView.findViewById(R.id.tv_mname);
+             editbutton=(Button) itemView.findViewById(R.id.edit_button) ;
             terminalid = (TextView) itemView.findViewById(R.id.terminalid_textview);
             cashiername = (TextView) itemView.findViewById(R.id.cashiername_textview);
             mobilenumber = (TextView) itemView.findViewById(R.id.mobilenumber_textview);

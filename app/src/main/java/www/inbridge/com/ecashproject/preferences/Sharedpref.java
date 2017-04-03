@@ -75,8 +75,8 @@ public class Sharedpref {
 
 
     public static  String newstr=null;
-
-
+    public static  String newstr1=null;
+    public static  String newstr2=null;
 
 
 
