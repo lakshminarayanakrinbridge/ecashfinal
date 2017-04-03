@@ -67,7 +67,8 @@
         <activity android:name=".activities.AdminViewMerchantOfferActivity" />
         <activity android:name=".activities.MerchantAddOffer" />
         <activity android:name=".activities.MerchantChangePassword" />
-        <activity android:name=".activities.MerchantViewOfferActivity"></activity>
+        <activity android:name=".activities.MerchantViewOfferActivity" />
+        <activity android:name=".activities.MerchantEditProfileActivity"></activity>
     </application>
 
 </manifest>
